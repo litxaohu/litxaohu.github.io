@@ -78,7 +78,7 @@ ba_track_id: aae04e360ad7363865b403ad0300ec4c
 
 # Google Analytics
 ga_track_id: 'G-LSN3P23W37'            # Format: UA-xxxxxx-xx
-ga_domain: auto              # 默认的是 auto, 这里我是自定义了的域名，你如果没有自己的域名，需要改成auto
+ga_domain: hbzjkhhz.fun              # 默认的是 auto, 这里我是自定义了的域名，你如果没有自己的域名，需要改成auto
 
 
 
@@ -86,7 +86,7 @@ ga_domain: auto              # 默认的是 auto, 这里我是自定义了的域
 
 # Featured Tags
 featured-tags: true                     # 是否使用首页标签
-featured-condition-size: 1              # 相同标签数量大于这个数，才会出现在首页
+featured-condition-size: 0              # 相同标签数量大于这个数，才会出现在首页
 
 
 
