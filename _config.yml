@@ -99,16 +99,16 @@ service-worker: true
 # Friends
 friends: [
     {
-        title: "WY",
-        href: "http://zhengwuyang.com"
+        title: "博客园·hbzjkhhz",
+        href: "https://www.cnblogs.com/hbzjkhhz/articles/17606852.html"
     },{
-        title: "简书·BY",
-        href: "http://www.jianshu.com/u/e71990ada2fd"
+        title: "飞书",
+        href: "https://ucncjjg0ue3c.feishu.cn/drive/home/"
     },{
-        title: "Apple",
-        href: "https://apple.com"
+        title: "Bilbil",
+        href: "https://www.bilibili.com/opus/851870754179907591"
     },{
-        title: "Apple Developer",
-        href: "https://developer.apple.com/"
+        title: "CSDN",
+        href: "https://blog.csdn.net/qq_57120137/article/details/150216570?spm=1001.2014.3001.5501"
     }
 ]
