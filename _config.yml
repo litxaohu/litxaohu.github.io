@@ -12,7 +12,7 @@ github_repo: "https://github.com/litxaohu/litxaohu.github.io.git" # you code rep
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "Embedded application engineer, learning AI cameras!"
-sidebar-avatar: /img/Logo-150x150.png      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: /img/headphoto_cat.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
