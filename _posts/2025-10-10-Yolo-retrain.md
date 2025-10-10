@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Hello 2025
+title:      自定义模型教程--yolo11 Edge部署
 subtitle:    "\"reTrain Yolo11 model Deployment Edge\""
 date:       2025-10-10
 author:     Parker
