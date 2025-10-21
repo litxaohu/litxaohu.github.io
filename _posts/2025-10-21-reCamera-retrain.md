@@ -22,28 +22,6 @@ tags:
 
 这是本次工作坊的流程图。若遇到任何问题，可向**工作人员**咨询，并说明出现问题时正在执行**哪一步骤、哪一选项**的操作，以便我们快速帮您定位问题。
 
-### **目录**
-
-- **[第一步：数据集采集](# 第一步：数据集采集)**
-  - [选项 1：从Roboflow下载数据集](# 选项 1：从Roboflow下载数据集)
-
-  - [选项 2：使用CVAT平台标注数据集](# 选项 2：使用CVAT平台标注数据集)
-
-  - [选项 3：使用 SpireView 软件标注数据集（仅适用于 Windows）](# 选项 3：使用 SpireView 软件标注数据集（仅适用于 Windows）)
-
-- **[步骤 2：训练 Yolo11n 模型](# 步骤 2：训练 Yolo11n 模型)**
-
-- **[步骤 3：模型转换与部署](# 步骤 3：模型转换与部署)**
-
-- **[步骤 4：模型部署到reCamera](# 步骤 4：模型部署到reCamera)**
-
-  - [选项 1：reCamera 基础款](# 选项 1：reCamera 基础款)
-
-  - [选项 2：reCamera 显微镜套件](# 选项 2：reCamera 显微镜套件)
-
-  - [选项 3：reCamera 高清 POE 版本](# 选项 3：reCamera 高清 POE 版本)
-
-  - [选项 4：reCamera 云台版本](# 选项 4：reCamera 云台版本)
 
 ## 第一步：数据集采集
 
@@ -328,7 +306,7 @@ data/                  # 数据集根目录
 
 ![image-20250921191115213](/img/reCamera_retrain/image-20250921191115213.png)
 
-## 步骤 2：训练 Yolo11n 模型
+## 第二步：训练 Yolo11n 模型
 
 Ultralytics Yolo 已搭建用于模型训练的在线平台 [Ultralytics HUB](https://hub.ultralytics.com/signin)。通过上传数据集，可快速完成模型训练，并以多种格式导出模型文件。
 
@@ -419,7 +397,7 @@ model_yolo11n/
 
 文件准备完成后，进入 **[步骤 3：模型转换与部署](# 步骤 3：模型转换与部署)**
 
-## 步骤 3：模型转换与部署
+## 第三步：模型转换与部署
 
 ### 搭建工作环境
 
@@ -558,7 +536,7 @@ model_deploy \
 
 **如需了解更多细节**，可参考完整在线资料：[w](https://wiki.seeedstudio.com/recamera_model_conversion/)[iki 文](https://wiki.seeedstudio.com/recamera_model_conversion/)[档](https://wiki.seeedstudio.com/recamera_model_conversion/) 或 [中文](https://blog.csdn.net/D777777777777/article/details/149200276?spm=1001.2014.3001.5502)[指南](https://blog.csdn.net/D777777777777/article/details/149200276?spm=1001.2014.3001.5502)
 
-## **步骤 4：模型部署到reCamera**
+## **第四步：模型部署到reCamera**
 
 ### 选项 1：reCamera 基础款
 
@@ -734,5 +712,5 @@ POE 版设备还配备 3 个自定义 IO 端口和 1 个串口：
 
 若连接 reCamera 后电脑无法正常联网，可参考以下 wiki 文档获取解决方案：
 
-[常见问题 | Seeed Studio Wiki](https://wiki.seeedstudio.com/cn/recamera_network_connection/)
+[常见问题](https://wiki.seeedstudio.com/cn/recamera_network_connection/)
 
