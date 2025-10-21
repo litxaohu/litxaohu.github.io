@@ -23,7 +23,7 @@ tags:
 这是本次工作坊的流程图。若遇到任何问题，可向**工作人员**咨询，并说明出现问题时正在执行**哪一步骤、哪一选项**的操作，以便我们快速帮您定位问题。
 
 
-## 第一步：数据集采集
+# 第一步：数据集采集
 
 ### 选项 1：从Roboflow下载数据集
 
@@ -89,7 +89,7 @@ data/                  # 数据集根目录
 
 ![演示](/img/reCamera_retrain/d10.png)
 
-成功下载的 **.zip 压缩文件夹**，将在 [**步骤 2：训练 Yolo11n 模型**](# 步骤 2：训练 Yolo11n 模型) 中使用，现在可进入训练环节。
+成功下载的 **.zip 压缩文件夹**，将在 [**第二步：训练 Yolo11n 模型**](#第二步训练-yolo11n-模型) 中使用，现在可进入训练环节。
 
 ### 选项 2：使用CVAT平台标注数据集
 
@@ -167,7 +167,7 @@ data/                  # 数据集根目录
 
 ![演示](/img/reCamera_retrain/s1.png)
 
-参照 [“选项 1”](# 数据集结构) 的数据集结构，整理为如下格式：
+参照 [“选项 1”](#数据集结构) 的数据集结构，整理为如下格式：
 
 ![演示](/img/reCamera_retrain/s2.png)
 
@@ -191,7 +191,7 @@ roboflow:
   url: https://universe.roboflow.com/rf-projects/pcb-holes/dataset/4
 ```
 
-最后，将整理好的数据集压缩为 **.zip 文件夹**，将在 [**步骤 2：训练 Yolo11n 模型**](# Step 2: Training Yolo11n model) 中使用。
+最后，将整理好的数据集压缩为 **.zip 文件夹**，将在 [**第二步：训练 Yolo11n 模型**](#第二步训练-yolo11n-模型)中使用。
 
 ![image-20250918153954024](/img/reCamera_retrain/image-20250918153954024.png)
 
@@ -276,11 +276,11 @@ data/                  # 数据集根目录
 │── data.yaml # 配置文件：包含数据集路径、类别及元数据
 ```
 
-最后，将整理好的数据集压缩为 **.zip 文件夹**，将在 [**步骤 2：训练 Yolo11n 模型**](# 步骤 2：训练 Yolo11n 模型) 中使用。
+最后，将整理好的数据集压缩为 **.zip 文件夹**，将在[**第二步：训练 Yolo11n 模型**](#第二步训练-yolo11n-模型)中使用。
 
 #### （可选）使用 reCamera 获取图像数据集
 
-阅读本部分前，请先了解 [选项 1：reCamera 基础款](# 选项 1：reCamera 基础款)。
+阅读本部分前，请先了解 [选项 1：reCamera 基础款](#选项-1recamera-基础款)。
 
 可使用 reCamera 拍摄图像，标注为自有数据集，再训练并选择适配 reCamera 的模型。
 
@@ -306,7 +306,7 @@ data/                  # 数据集根目录
 
 ![image-20250921191115213](/img/reCamera_retrain/image-20250921191115213.png)
 
-## 第二步：训练 Yolo11n 模型
+# 第二步：训练 Yolo11n 模型
 
 Ultralytics Yolo 已搭建用于模型训练的在线平台 [Ultralytics HUB](https://hub.ultralytics.com/signin)。通过上传数据集，可快速完成模型训练，并以多种格式导出模型文件。
 
@@ -362,7 +362,7 @@ Ultralytics Yolo 已搭建用于模型训练的在线平台 [Ultralytics HUB](ht
 
 ![image-20250918164440854](/img/reCamera_retrain/image-20250918164440854.png)
 
-[**Ul**](https://hub.ultralytics.com/signin)[**tral**](https://hub.ultralytics.com/signin)[**ytic**](https://hub.ultralytics.com/signin)[**s HU**](https://hub.ultralytics.com/signin)[**B**](https://hub.ultralytics.com/signin) 平台按模型训练时长计费，价格优惠，欢迎大家使用该平台训练自定义模型。
+[Ultralytics HUB](https://hub.ultralytics.com/signin)平台按模型训练时长计费，价格优惠，欢迎大家使用该平台训练自定义模型。
 
 ![image-20250918165046842](/img/reCamera_retrain/image-20250918165046842.png)
 
@@ -376,9 +376,9 @@ Ultralytics Yolo 已搭建用于模型训练的在线平台 [Ultralytics HUB](ht
 
 **最终**，需按以下结构整理文件，为下一步操作做准备：
 
-- **COCO2017 文件夹**：用于存放校准数据集，需从你的[数据集](# 数据集结构)中复制 100 张图片放入该文件夹；
+- **COCO2017 文件夹**：用于存放校准数据集，需从你的[数据集](#数据集结构)中复制 100 张图片放入该文件夹；
 
-- **image 文件夹**：用于存放测试图片，需从你的[数据集](# 数据集结构)中复制 1 张图片，并将其重命名为 **"test.jpg"**；
+- **image 文件夹**：用于存放测试图片，需从你的[数据集](#数据集结构)中复制 1 张图片，并将其重命名为 **"test.jpg"**；
 
 - **Workspace 文件夹**：用于存放模型文件，将刚才下载的 ONNX 模型文件放入该文件夹。
 
@@ -395,9 +395,9 @@ model_yolo11n/
     └── yolo11n_food.onnx    # ONNX 模型（刚下载的 ONNX 模型文件）          
 ```
 
-文件准备完成后，进入 **[步骤 3：模型转换与部署](# 步骤 3：模型转换与部署)**
+文件准备完成后，进入 **[第三步：模型转换与部署](#第三步模型转换与部署)**
 
-## 第三步：模型转换与部署
+# 第三步：模型转换与部署
 
 ### 搭建工作环境
 
@@ -405,7 +405,7 @@ model_yolo11n/
 
 **若你不具备相关技术能力**，请将上一步准备好的文件夹发送给现场工作人员，并跳过 “步骤 3：模型转换与部署”。
 
-工作人员将协助你完成必要的模型转换，并发送一个以 **“cvimodel”** 为后缀的文件给你，该文件将在 **[步骤 4：模型部署到reCamera](# 步骤 4：模型部署到reCamera)** 中使用。
+工作人员将协助你完成必要的模型转换，并发送一个以 **“cvimodel”** 为后缀的文件给你，该文件将在 **[第四步：模型部署到reCamera](#第四步模型部署到recamera)** 中使用。
 
 #### 步骤 1：登录模型转换服务器
 
@@ -436,7 +436,7 @@ cd tpu-mlir/model_yolo11n/workspace/
 
 #### 步骤 2：准备工作空间
 
-将上一步（即 **[步骤 4：下载 ONNX 模型](# 步骤 4：下载 ONNX 模型)**）准备好的 **model_yolo11n 文件夹**复制到 **tpu-mlir 目录**下。
+将上一步（即 **[步骤 4：下载 ONNX 模型](#步骤-4下载-onnx-模型)**）准备好的 **model_yolo11n 文件夹**复制到 **tpu-mlir 目录**下。
 
 ```
 cd model_yolo11n
@@ -536,15 +536,19 @@ model_deploy \
 
 **如需了解更多细节**，可参考完整在线资料：[w](https://wiki.seeedstudio.com/recamera_model_conversion/)[iki 文](https://wiki.seeedstudio.com/recamera_model_conversion/)[档](https://wiki.seeedstudio.com/recamera_model_conversion/) 或 [中文](https://blog.csdn.net/D777777777777/article/details/149200276?spm=1001.2014.3001.5502)[指南](https://blog.csdn.net/D777777777777/article/details/149200276?spm=1001.2014.3001.5502)
 
-## **第四步：模型部署到reCamera**
+# **第四步：模型部署到reCamera**
 
 ### 选项 1：reCamera 基础款
+
+#### 步骤 1：准备与连接
 
 - 确保你已准备好 reCamera 设备和一根 Type-C 数据线。
 
 - ![image-20250916145844604](/img/reCamera_retrain/\image-20250916145844604.png)使用数据线将 reCamera 与电脑连接。
 
-#### ![image-20250916150122897](/img/reCamera_retrain/\image-20250916150122897.png)步骤 2：将模型部署到 reCamera
+![image-20250916150122897](/img/reCamera_retrain/\image-20250916150122897.png)
+
+#### 步骤 2：将模型部署到 reCamera
 
 - 访问 [192.168.42.1](http://192.168.42.1) 进入 reCamera 的加载页面。登录的 **用户名** 为：root；**密码** 为：recamera.1
 
@@ -644,7 +648,7 @@ http://192.168.42.1/#/network     //后端网页链接，可配置网络设置�
 
 ![image-20250916174804728](/img/reCamera_retrain/image-20250916174804728.png)
 
-模型部署操作，请参考 [将](#Deploy-the-model-to-reCamera)[模型](#Deploy-the-model-to-reCamera)[部署到 r](#步骤 2：将模型部署到 reCamera)[eCame](#步骤 2：将模型部署到 reCamera)[ra](#Deploy-the-model-to-reCamera)。
+模型部署操作，请参考 [将模型部署到reCamera](#步骤-2将模型部署到-recamera)。
 
 ### 选项 3：reCamera 高清 POE 版本
 
@@ -658,7 +662,7 @@ http://192.168.42.1/#/network     //后端网页链接，可配置网络设置�
 
 - 访问 [192.168.42.1](http://192.168.42.1) 进入 reCamera 的加载页面，登录的 **用户名** 为：root；**密码** 为：recamera.1
 
-- 模型部署或登录操作，请参考 [将模型部署](#步骤 2：将模型部署到 reCamera)[到 reC](#Deploy-the-model-to-reCamera)[amera](#步骤 2：将模型部署到 reCamera)。
+- 模型部署或登录操作，请参考[将模型部署到reCamera](#步骤-2将模型部署到-recamera)。
 
 - reCamera 高清 POE 版的软件与默认版一致，但该版本设备配备了更清晰的 CMOS 传感器和更广角度的镜头。
 
@@ -692,21 +696,23 @@ POE 版设备还配备 3 个自定义 IO 端口和 1 个串口：
 
 - 确保你已准备好 reCamera 云台版设备、一个 12V 直流电源适配器和一根 Type-C 数据线。
 
-- ![image-20250917105125132](/img/reCamera_retrain/\image-20250917105125132.png)首先，将 12V 电源适配器连接到 reCamera 云台，等待云台电机完成校准。
+  ![image-20250917105125132](/img/reCamera_retrain/\image-20250917105125132.png)首先，将 12V 电源适配器连接到 reCamera 云台，等待云台电机完成校准。
 
 （**注意：必须先将 12V 电源适配器连接到云台，否则电机无法成功初始化。**）
 
-- ![image-20250917105338466](/img/reCamera_retrain/\image-20250917105338466.png)然后，使用 USB 数据线将 reCamera 云台与电脑连接。
+![image-20250917105338466](/img/reCamera_retrain/\image-20250917105338466.png)然后，使用 USB 数据线将 reCamera 云台与电脑连接。
 
-#### ![image-20250916150122897](/img/reCamera_retrain/\image-20250916150122897.png)步骤 2：查看预览
+![image-20250916150122897](/img/reCamera_retrain/image-20250916150122897.png)
+
+#### 步骤 2：查看预览
 
 - 访问 [192.168.42.1](http://192.168.42.1) 进入 reCamera 的加载页面，登录的 **用户名** 为：root；**密码** 为：recamera.1
 
-- 模型部署或登录操作，请参考 [将模型部署到 reCamera](#步骤 2：将模型部署到 reCamera)。
+- 模型部署或登录操作，请参考 [将模型部署到reCamera](#步骤-2将模型部署到-recamera)。
 
 - reCamera 云台版的预览功能与默认版类似，但额外增加了电机控制和目标跟踪功能。
 
-**![image-20250917110022368](/img/reCamera_retrain/image-20250917110022368.png)
+![image-20250917110022368](/img/reCamera_retrain/image-20250917110022368.png)
 
 ## 注意事项
 
